@@ -1,0 +1,85 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-color: #252525;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+  font-size: 1.9rem;
+}
+p {
+  font-size: 1rem;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.card {
+  width: 350px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #1c1f2b;
+  text-align: center;
+  border-radius: 10px;
+  color: white;
+  position: relative;
+}
+
+.card::before {
+  filter: blur(1.5rem);
+  opacity: 0.7;
+}
+
+.card::after,
+.card::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* this is where you need to change the colors
+  to get the desired effect 
+    #ff0000,
+    #ff8000,
+    #ffff00,
+    #80ff00,
+    #00ff00,
+    #00ff80,
+    #00ffff,
+    #0080ff,
+    #0000ff,
+    #8000ff,
+    #ff00ff,
+    #ff0080,
+    try adding these instead of white and transparent 
+  */
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 80%,
+    white 100%
+  );
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  padding: 3px;
+  animation: 3.2s rotate linear infinite;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+@keyframes rotate {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
