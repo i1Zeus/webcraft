@@ -1,0 +1,30 @@
+.clipped-text {
+  font-size: 72px;
+  font-weight: bold;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.clipped-text:before {
+  content: "CLIPPED";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(90deg, #f39c12, #d35400);
+  clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+  animation: clipAnimation 3s infinite ease-in-out;
+}
+
+@keyframes clipAnimation {
+  0%,
+  100% {
+    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+  }
+  50% {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  }
+}
