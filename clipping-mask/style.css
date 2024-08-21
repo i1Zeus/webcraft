@@ -1,7 +1,8 @@
 .clipped-text {
   font-size: 72px;
   font-weight: bold;
-  color: white;
+  color: #5f55ae;
+  opacity: 0.8;
   position: relative;
   overflow: hidden;
   line-height: 1;
@@ -14,7 +15,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, #5f55ae 60%, #ffd594);
+  background: linear-gradient(90deg, #ffd594, #daa049);
   clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
   animation: clipAnimation 3s infinite ease-in-out;
 }
