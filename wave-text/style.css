@@ -1,0 +1,32 @@
+.wave-text {
+  display: inline-block;
+  font-size: 24px;
+  animation: waveText 2s infinite ease-in-out;
+}
+
+.wave-text span {
+  display: inline-block;
+  animation: waveChar 1.5s infinite ease-in-out;
+  color: white;
+}
+
+.wave-text span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.wave-text span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.wave-text span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+/* Continue for each character */
+
+@keyframes waveChar {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
