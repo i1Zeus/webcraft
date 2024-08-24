@@ -40,3 +40,13 @@
     transform: rotateX(360deg) rotateY(360deg);
   }
 }
+
+p {
+  font-size: 1rem;
+  margin: 0;
+  text-wrap: balance;
+  color: white;
+  font-size: larger;
+  text-align: center;
+  font-weight: 600;
+}
